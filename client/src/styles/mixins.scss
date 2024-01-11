@@ -1,0 +1,30 @@
+@mixin sp-layout {
+  @media screen and (max-width: 750px) {
+    @content;
+  }
+}
+
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: $scheme-white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $scheme-navy-blue;
+    outline: 1px solid $scheme-navy-blue;
+  }
+}
+
+@mixin main-button {
+  font-size: 1.1rem;
+  width: 10rem;
+  padding: 0.5rem 0;
+  border: 1px solid $scheme-navy-blue;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}

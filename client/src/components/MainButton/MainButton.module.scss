@@ -1,0 +1,14 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.secondary {
+  @include main-button;
+  background-color: transparent;
+  color: $scheme-navy-blue;
+}
+
+.primary {
+  @include main-button;
+  background-color: $scheme-navy-blue;
+  color: $scheme-white;
+}

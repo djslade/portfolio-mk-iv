@@ -1,0 +1,1 @@
+export { PageParagraphText } from "./PageParagraphText";

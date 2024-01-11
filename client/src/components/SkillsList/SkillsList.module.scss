@@ -1,0 +1,28 @@
+@import "../../styles/variables.scss";
+
+.skillsListContainer {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.skillsList {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  li {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    background-color: $scheme-gold;
+    color: $scheme-white;
+    font-weight: 500;
+    font-family: "Ubuntu", sans-serif;
+    border: 1px solid $scheme-gold;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.2rem $scheme-dark-gray;
+  }
+}

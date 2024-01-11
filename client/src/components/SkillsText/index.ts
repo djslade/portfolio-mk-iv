@@ -1,0 +1,1 @@
+export { SkillsText } from "./SkillsText";

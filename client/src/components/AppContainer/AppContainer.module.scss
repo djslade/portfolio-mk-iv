@@ -1,0 +1,12 @@
+@import "../../styles/variables.scss";
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: $scheme-navy-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
