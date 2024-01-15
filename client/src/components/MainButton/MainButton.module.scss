@@ -5,10 +5,21 @@
   @include main-button;
   background-color: transparent;
   color: $scheme-navy-blue;
+
+  &:hover {
+    border: 1px solid $scheme-dark-blue;
+    background-color: $scheme-dark-blue;
+    color: $scheme-white;
+  }
 }
 
 .primary {
   @include main-button;
   background-color: $scheme-navy-blue;
   color: $scheme-white;
+
+  &:hover {
+    border: 1px solid $scheme-dark-blue;
+    background-color: $scheme-dark-blue;
+  }
 }

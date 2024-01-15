@@ -1,7 +1,7 @@
 import "./styles/main.scss";
 import { motion } from "framer-motion";
 import { AppBackground, AppContainer } from "./components";
-import { About, Header, Landing, Skills } from "./modules";
+import { About, Contact, Header, Landing, Projects, Skills } from "./modules";
 import { useActiveView } from "./contexts";
 
 function App() {
@@ -10,11 +10,19 @@ function App() {
   return (
     <AppContainer>
       <AppBackground />
-      <motion.div layout className="main">
+      <motion.div
+        layout
+        className="main"
+        initial={{ height: 0 }}
+        whileInView={{ height: "auto" }}
+        transition={{ duration: 0.3 }}
+      >
         <Header />
         {activeView === "landing" && <Landing />}
         {activeView === "about" && <About />}
         {activeView === "skills" && <Skills />}
+        {activeView === "contact" && <Contact />}
+        {activeView === "projects" && <Projects />}
       </motion.div>
     </AppContainer>
   );

@@ -6,7 +6,10 @@
   background-color: $scheme-navy-blue;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 1rem;
   position: relative;
+
+  @media (min-width: 600px) {
+    padding: 1rem;
+    align-items: center;
+  }
 }

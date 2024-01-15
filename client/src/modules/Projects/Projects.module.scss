@@ -1,0 +1,83 @@
+@import "../../styles/variables.scss";
+
+.projectsOuterContainer {
+  box-shadow: 0 0.1rem 0.2rem $scheme-dark-gray;
+
+  .pageContentContainer {
+    background-color: $scheme-gold;
+  }
+}
+.projectsTextSection {
+  flex: 1;
+  padding: 2rem 0;
+  width: 60ch;
+
+  @media (min-width: 1024px) {
+    padding: 3rem 0;
+    width: auto;
+  }
+}
+
+.projectImage {
+  background-color: $scheme-gold;
+  flex: 1;
+  display: none;
+  justify-content: center;
+
+  @media (min-width: 900px) {
+    display: flex;
+  }
+
+  img {
+    width: 300px;
+    height: auto;
+  }
+}
+
+.goldBackground {
+  background-color: $scheme-gold;
+  flex: 1;
+  display: none;
+  justify-content: center;
+
+  @media (min-width: 900px) {
+    display: flex;
+  }
+
+  img {
+    width: 300px;
+    height: auto;
+  }
+}
+
+.darkBlueBackground {
+  background-color: $scheme-dark-blue;
+  flex: 1;
+  display: none;
+  justify-content: center;
+
+  @media (min-width: 900px) {
+    display: flex;
+  }
+
+  img {
+    width: 300px;
+    height: auto;
+  }
+}
+
+.navyBlueBackground {
+  background-color: $scheme-navy-blue;
+  flex: 1;
+  display: none;
+  justify-content: center;
+
+  @media (min-width: 900px) {
+    display: flex;
+  }
+
+  img {
+    width: 300px;
+    height: auto;
+  }
+}

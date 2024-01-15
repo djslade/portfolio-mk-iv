@@ -7,6 +7,13 @@ interface Props {
 
 export const PageContentContainer = ({ children }: Props) => {
   return (
-    <motion.div className={classes.pageContentContainer}>{children}</motion.div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.3, duration: 0.3 }}
+      className={classes.pageContentContainer}
+    >
+      {children}
+    </motion.div>
   );
 };
