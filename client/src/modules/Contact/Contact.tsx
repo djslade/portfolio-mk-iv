@@ -1,12 +1,56 @@
+import { useState } from "react";
 import {
+  ButtonGroupContainer,
   FlexContainer,
   MainButton,
   PageContentContainer,
   PageText,
+  PageTextSection,
 } from "../../components";
 import classes from "./Contact.module.scss";
+import * as Yup from "yup";
+import emailjs from "@emailjs/browser";
+import { Formik, Field, Form } from "formik";
 
 export const Contact = () => {
+  const [sendingEmail, setSendingEmail] = useState<boolean>(false);
+
+  const [emailSentSuccessfully, setEmailSendSuccessfully] =
+    useState<boolean>(false);
+
+  const ContactSchema = Yup.object().shape({
+    name: Yup.string().required("This field is required"),
+    email: Yup.string()
+      .email("Invalid email")
+      .required("This field is required"),
+    message: Yup.string().required("This field is required"),
+  });
+
+  const sendEmail = (name: string, email: string, message: string) => {
+    if (sendingEmail) return;
+    setSendingEmail(true);
+    const templateParams = {
+      name,
+      email,
+      message,
+    };
+    emailjs
+      .send(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setSendingEmail(false);
+          setEmailSendSuccessfully(true);
+        },
+        () => {
+          setSendingEmail(false);
+        }
+      );
+  };
   return (
     <PageContentContainer>
       <FlexContainer>
@@ -19,43 +63,92 @@ export const Contact = () => {
           />
         </div>
         <div className={classes.contactFormSection}>
-          <form className={classes.form}>
-            <div className={classes.formControl}>
-              <label htmlFor="name">Name</label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                className={classes.formInput}
-                placeholder="Name"
+          {emailSentSuccessfully ? (
+            <PageTextSection>
+              <PageText
+                headingText="Message sent"
+                paragraphText={[
+                  "Thank you for emailing me! I will get back to you as soon as possible.",
+                ]}
               />
-            </div>
-            <div className={classes.formControl}>
-              <label htmlFor="email">Email</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                className={classes.formInput}
-                placeholder="Email"
-              />
-            </div>
-            <div className={classes.formControl}>
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows={3}
-                className={classes.formInput}
-                placeholder="Message"
-              />
-            </div>
-            <MainButton
-              primary
-              text="Send"
-              onClick={() => console.log("boop")}
-            />
-          </form>
+              <ButtonGroupContainer>
+                <MainButton
+                  primary
+                  text="Send again"
+                  onClick={() => setEmailSendSuccessfully(false)}
+                />
+              </ButtonGroupContainer>
+            </PageTextSection>
+          ) : (
+            <Formik
+              initialValues={{
+                name: "",
+                email: "",
+                message: "",
+              }}
+              validationSchema={ContactSchema}
+              onSubmit={(values) => {
+                sendEmail(values.name, values.email, values.message);
+              }}
+            >
+              {({ errors, touched }) => (
+                <Form className={classes.form}>
+                  <div className={classes.formControl}>
+                    <label htmlFor="name">Name</label>
+                    <Field
+                      as="input"
+                      id="name"
+                      name="name"
+                      type="text"
+                      className={classes.formInput}
+                      placeholder="Name"
+                    />
+                    {errors.name && touched.name && (
+                      <span className={classes.errorMessage}>
+                        {errors.name}
+                      </span>
+                    )}
+                  </div>
+                  <div className={classes.formControl}>
+                    <label htmlFor="email">Email</label>
+                    <Field
+                      as="input"
+                      id="email"
+                      name="email"
+                      type="email"
+                      className={classes.formInput}
+                      placeholder="Email"
+                    />
+                    {errors.email && touched.email && (
+                      <span className={classes.errorMessage}>
+                        {errors.email}
+                      </span>
+                    )}
+                  </div>
+                  <div className={classes.formControl}>
+                    <label htmlFor="message">Message</label>
+                    <Field
+                      as="textarea"
+                      id="message"
+                      name="message"
+                      rows={3}
+                      className={classes.formInput}
+                      placeholder="Message"
+                    />
+                    {errors.message && touched.message && (
+                      <span className={classes.errorMessage}>
+                        {errors.message}
+                      </span>
+                    )}
+                  </div>
+                  <MainButton
+                    primary
+                    text={sendingEmail ? "Sending..." : "Send"}
+                  />
+                </Form>
+              )}
+            </Formik>
+          )}
         </div>
       </FlexContainer>
     </PageContentContainer>

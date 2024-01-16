@@ -4,7 +4,8 @@ import {
   PageText,
   PageTextSection,
 } from "..";
-import { useActiveView } from "../../contexts";
+import { useSiteNavigate } from "../../hooks";
+import classes from "./AboutText.module.scss";
 
 const text: string[] = [
   "My name’s David and I’m a self taught web developer. I currently live in south Finland with my amazing wife and our two cats.",
@@ -14,17 +15,18 @@ const text: string[] = [
 ];
 
 export const AboutText = () => {
-  const { setActiveView } = useActiveView();
+  const navigate = useSiteNavigate();
 
   return (
     <PageTextSection>
+      <img src="/about-me-desktop.jpg" className={classes.aboutTextImage} />
       <PageText headingText="My story" paragraphText={text} />
       <ButtonGroupContainer>
-        <MainButton text="See my CV" onClick={() => console.log("boop")} />
+        <MainButton link href="/David-Slade-CV.pdf" text="See my CV" />
         <MainButton
           primary
           text="Get in touch"
-          onClick={() => setActiveView("contact")}
+          onClick={() => navigate("contact")}
         />
       </ButtonGroupContainer>
     </PageTextSection>

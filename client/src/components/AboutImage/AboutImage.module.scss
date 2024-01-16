@@ -1,8 +1,11 @@
+@import "../../styles/variables.scss";
+
 .imageContainer {
   display: none;
-  justify-content: end;
+  justify-content: center;
   align-self: stretch;
   padding: 0 2rem;
+  width: 50%;
 
   @media (min-width: 900px) {
     display: flex;
@@ -13,10 +16,12 @@
   }
 
   img {
-    width: auto;
+    width: 300px;
     height: auto;
-    align-self: flex-start;
-    border: 1px solid transparent;
+    align-self: center;
+    justify-self: flex-end;
+    border: 1px solid $scheme-dark-gray;
     border-radius: 1rem;
+    box-shadow: 0 1rem 2rem $scheme-dark-gray;
   }
 }

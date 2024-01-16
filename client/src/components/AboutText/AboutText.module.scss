@@ -1,0 +1,15 @@
+@import "../../styles/variables.scss";
+
+.aboutTextImage {
+  display: unset;
+  align-self: center;
+  box-shadow: 0 0.25rem 0.5rem $scheme-dark-gray;
+  width: 300px;
+  height: auto;
+  border: 1px solid $scheme-dark-gray;
+  border-radius: 1rem;
+
+  @media (min-width: 900px) {
+    display: none;
+  }
+}

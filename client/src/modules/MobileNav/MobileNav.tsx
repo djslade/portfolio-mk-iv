@@ -1,36 +1,15 @@
-import { motion } from "framer-motion";
-import { useActiveView, useMobileNavView } from "../../contexts";
-import classes from "./Header.module.scss";
-import { Menu, X } from "react-feather";
+import { PageContentContainer } from "../../components";
+import { useActiveView } from "../../contexts";
 import { useSiteNavigate } from "../../hooks";
+import classes from "./MobileNav.module.scss";
 
-interface Props {
-  scrolling: boolean;
-}
-export const Header = ({ scrolling }: Props) => {
+export const MobileNav = () => {
   const { activeView } = useActiveView();
-  const { mobileNavView, setMobileNavView } = useMobileNavView();
+
   const navigate = useSiteNavigate();
 
   return (
-    <motion.div
-      layout="position"
-      className={`${classes.header} ${
-        scrolling ? classes.scrollingHeader : ""
-      }`}
-    >
-      <button
-        className={classes.logoButton}
-        onClick={() => navigate("landing")}
-      >
-        <img src="/portfolio-logo.svg" alt="David Slade" />
-      </button>
-      <button
-        className={classes.mobileMenuButton}
-        onClick={() => setMobileNavView(!mobileNavView)}
-      >
-        {mobileNavView ? <X /> : <Menu />}
-      </button>
+    <PageContentContainer>
       <nav className={classes.nav}>
         <button
           className={activeView === "about" ? classes.active : ""}
@@ -59,6 +38,6 @@ export const Header = ({ scrolling }: Props) => {
           See my work
         </button>
       </nav>
-    </motion.div>
+    </PageContentContainer>
   );
 };

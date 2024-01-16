@@ -15,6 +15,8 @@ export const Projects = () => {
         <FlexContainer>
           <div className={classes.projectsTextSection}>
             <PageTextSection>
+              <img src="/totalwash-resized.jpg" />
+
               <PageText
                 headingText="Totalwash"
                 paragraphText={[
@@ -23,12 +25,14 @@ export const Projects = () => {
               />
               <ButtonGroupContainer>
                 <MainButton
-                  onClick={() => console.log("boop")}
+                  link
+                  href="https://github.com/Fenroe/totalwash"
                   text="Github repo"
                 />
                 <MainButton
+                  link
+                  href="https://totalwash.vercel.app/"
                   primary
-                  onClick={() => console.log("boop")}
                   text="Live demo"
                 />
               </ButtonGroupContainer>
@@ -36,15 +40,16 @@ export const Projects = () => {
           </div>
 
           <div className={classes.navyBlueBackground}>
-            <img src="/projects-laptop-totalwash.svg" />
+            <img src="/totalwash-resized.jpg" />
           </div>
         </FlexContainer>
         <FlexContainer>
           <div className={classes.goldBackground}>
-            <img src="/projects-laptop-chonthong.svg" />
+            <img src="/chonthong-resized.jpg" />
           </div>
           <div className={classes.projectsTextSection}>
             <PageTextSection>
+              <img src="/chonthong-resized.jpg" />
               <PageText
                 headingText="Chon Thong Thai Ravintola"
                 paragraphText={[
@@ -53,12 +58,14 @@ export const Projects = () => {
               />
               <ButtonGroupContainer>
                 <MainButton
-                  onClick={() => console.log("boop")}
+                  link
+                  href="https://github.com/Fenroe/chon-thong-restuarant"
                   text="Github repo"
                 />
                 <MainButton
                   primary
-                  onClick={() => console.log("boop")}
+                  link
+                  href="https://chonthongthai.netlify.app/"
                   text="Live demo"
                 />
               </ButtonGroupContainer>
@@ -68,6 +75,7 @@ export const Projects = () => {
         <FlexContainer>
           <div className={classes.projectsTextSection}>
             <PageTextSection>
+              <img src="/snapshot-resized.jpg" />
               <PageText
                 headingText="Snapshot"
                 paragraphText={[
@@ -76,12 +84,14 @@ export const Projects = () => {
               />
               <ButtonGroupContainer>
                 <MainButton
-                  onClick={() => console.log("boop")}
+                  link
+                  href="https://github.com/Fenroe/Snapshot"
                   text="Github repo"
                 />
                 <MainButton
+                  link
+                  href="https://react-snapshot.netlify.app/"
                   primary
-                  onClick={() => console.log("boop")}
                   text="Live demo"
                 />
               </ButtonGroupContainer>
@@ -89,7 +99,7 @@ export const Projects = () => {
           </div>
 
           <div className={classes.darkBlueBackground}>
-            <img src="/projects-laptop-snapshot.svg" />
+            <img src="/snapshot-resized.jpg" />
           </div>
         </FlexContainer>
       </div>

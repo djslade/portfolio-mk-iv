@@ -5,6 +5,7 @@
   @include main-button;
   background-color: transparent;
   color: $scheme-navy-blue;
+  text-decoration: none;
 
   &:hover {
     border: 1px solid $scheme-dark-blue;
@@ -17,6 +18,7 @@
   @include main-button;
   background-color: $scheme-navy-blue;
   color: $scheme-white;
+  text-decoration: none;
 
   &:hover {
     border: 1px solid $scheme-dark-blue;

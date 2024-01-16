@@ -7,9 +7,10 @@
   display: flex;
   justify-content: center;
   position: relative;
+  align-items: center;
 
   @media (min-width: 600px) {
-    padding: 1rem;
     align-items: center;
+    padding: 1rem;
   }
 }
