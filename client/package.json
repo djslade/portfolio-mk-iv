@@ -1,7 +1,7 @@
 {
-  "name": "client",
+  "name": "david-slade-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -16,7 +16,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
-    "react-router-dom": "^6.21.2",
     "yup": "^1.3.3"
   },
   "devDependencies": {
