@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+
+.main {
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 100%;
+  background-color: $scheme-white;
+  box-shadow: 0 0.5rem 1rem $scheme-black;
+  color: $scheme-dark-gray;
+  font-weight: medium;
+  z-index: 40;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: unset;
+  position: relative;
+  border-radius: 0.5rem;
+
+  @media (min-width: 600px) {
+    border-radius: 0.5rem;
+
+    &::-webkit-scrollbar {
+      width: 0.5em;
+    }
+
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: $scheme-white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $scheme-navy-blue;
+      outline: 1px solid $scheme-navy-blue;
+    }
+  }
+}
