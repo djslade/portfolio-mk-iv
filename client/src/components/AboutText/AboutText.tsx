@@ -4,7 +4,6 @@ import {
   PageText,
   PageTextSection,
 } from "..";
-import { useSiteNavigate } from "../../hooks";
 import classes from "./AboutText.module.scss";
 
 const text: string[] = [
@@ -15,19 +14,13 @@ const text: string[] = [
 ];
 
 export const AboutText = () => {
-  const navigate = useSiteNavigate();
-
   return (
     <PageTextSection>
       <img src="/about-me-desktop.jpg" className={classes.aboutTextImage} />
       <PageText headingText="My story" paragraphText={text} />
       <ButtonGroupContainer>
         <MainButton link href="/David-Slade-CV.pdf" text="See my CV" />
-        <MainButton
-          primary
-          text="Get in touch"
-          onClick={() => navigate("contact")}
-        />
+        <MainButton routerLink href="/contact" primary text="Get in touch" />
       </ButtonGroupContainer>
     </PageTextSection>
   );

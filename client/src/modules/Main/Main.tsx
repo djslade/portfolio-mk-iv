@@ -11,7 +11,7 @@ import {
 } from "..";
 import { useMobileNavView } from "../../contexts";
 import classes from "./Main.module.scss";
-import { Outlet, Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 export const Main = () => {
   const location = useLocation();
@@ -51,14 +51,17 @@ export const Main = () => {
         transition={{ duration: 0.3 }}
       >
         <Header scrolling={scrolling} />
-        {mobileNavView ? <MobileNav /> : <Outlet />}
-        <Routes location={location} key={locationArr[1]}>
-          <Route path="/" element={<Landing />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
+        {mobileNavView ? (
+          <MobileNav />
+        ) : (
+          <Routes location={location} key={locationArr[1]}>
+            <Route path="/" element={<Landing />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+        )}
       </motion.div>
     </AnimatePresence>
   );

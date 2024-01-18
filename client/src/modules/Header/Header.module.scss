@@ -56,7 +56,12 @@
       display: flex;
     }
 
-    button {
+    button,
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      text-align: center;
       background-color: transparent;
       font-family: "Ubuntu", sans-serif;
       border: none;

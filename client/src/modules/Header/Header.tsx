@@ -1,16 +1,17 @@
-import { motion } from "framer-motion";
-import { useActiveView, useMobileNavView } from "../../contexts";
+import { useMobileNavView } from "../../contexts";
 import classes from "./Header.module.scss";
 import { Menu, X } from "react-feather";
-import { useSiteNavigate } from "../../hooks";
+import { Link, useLocation } from "react-router-dom";
 
 interface Props {
   scrolling: boolean;
 }
 export const Header = ({ scrolling }: Props) => {
-  const { activeView } = useActiveView();
+  const location = useLocation();
   const { mobileNavView, setMobileNavView } = useMobileNavView();
-  const navigate = useSiteNavigate();
+  const handleNavigate = () => {
+    setMobileNavView(false);
+  };
 
   return (
     <header
@@ -18,12 +19,9 @@ export const Header = ({ scrolling }: Props) => {
         scrolling ? classes.scrollingHeader : ""
       }`}
     >
-      <button
-        className={classes.logoButton}
-        onClick={() => navigate("landing")}
-      >
+      <Link to="/" className={classes.logoButton} onClick={handleNavigate}>
         <img src="/portfolio-logo.svg" alt="David Slade" />
-      </button>
+      </Link>
       <button
         className={classes.mobileMenuButton}
         onClick={() => setMobileNavView(!mobileNavView)}
@@ -31,32 +29,32 @@ export const Header = ({ scrolling }: Props) => {
         {mobileNavView ? <X /> : <Menu />}
       </button>
       <nav className={classes.nav}>
-        <button
-          className={activeView === "about" ? classes.active : ""}
-          onClick={() => navigate("about")}
+        <Link
+          to="/about"
+          className={location.pathname === "/about" ? classes.active : ""}
         >
           About
-        </button>
-        <button
-          className={activeView === "skills" ? classes.active : ""}
-          onClick={() => navigate("skills")}
+        </Link>
+        <Link
+          to="/skills"
+          className={location.pathname === "/skills" ? classes.active : ""}
         >
           Skills
-        </button>
-        <button
-          className={activeView === "contact" ? classes.active : ""}
-          onClick={() => navigate("contact")}
+        </Link>
+        <Link
+          to="/contact"
+          className={location.pathname === "/contact" ? classes.active : ""}
         >
           Contact
-        </button>
-        <button
-          onClick={() => navigate("projects")}
+        </Link>
+        <Link
+          to="/projects"
           className={
-            activeView === "projects" ? classes.active : classes.primary
+            location.pathname === "/projects" ? classes.active : classes.primary
           }
         >
           See my work
-        </button>
+        </Link>
       </nav>
     </header>
   );

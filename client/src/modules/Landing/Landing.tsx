@@ -4,11 +4,8 @@ import {
   PageContentContainer,
 } from "../../components";
 import classes from "./Landing.module.scss";
-import { useSiteNavigate } from "../../hooks";
 
 export const Landing = () => {
-  const navigate = useSiteNavigate();
-
   return (
     <PageContentContainer>
       <h2 className={classes.landingText}>
@@ -18,12 +15,8 @@ export const Landing = () => {
         code.
       </h2>
       <ButtonGroupContainer>
-        <MainButton text="Get in touch" onClick={() => navigate("contact")} />
-        <MainButton
-          primary
-          text="See my work"
-          onClick={() => navigate("projects")}
-        />
+        <MainButton text="Get in touch" routerLink href="/contact" />
+        <MainButton primary text="See my work" routerLink href="/projects" />
       </ButtonGroupContainer>
     </PageContentContainer>
   );

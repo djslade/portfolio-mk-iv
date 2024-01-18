@@ -1,42 +1,50 @@
+import { Link, useLocation } from "react-router-dom";
 import { PageContentContainer } from "../../components";
-import { useActiveView } from "../../contexts";
-import { useSiteNavigate } from "../../hooks";
 import classes from "./MobileNav.module.scss";
+import { useMobileNavView } from "../../contexts";
 
 export const MobileNav = () => {
-  const { activeView } = useActiveView();
+  const location = useLocation();
 
-  const navigate = useSiteNavigate();
+  const { setMobileNavView } = useMobileNavView();
+
+  const navigate = () => {
+    setMobileNavView(false);
+  };
 
   return (
     <PageContentContainer>
       <nav className={classes.nav}>
-        <button
-          className={activeView === "about" ? classes.active : ""}
-          onClick={() => navigate("about")}
+        <Link
+          to="/about"
+          className={location.pathname === "/about" ? classes.active : ""}
+          onClick={navigate}
         >
           About
-        </button>
-        <button
-          className={activeView === "skills" ? classes.active : ""}
-          onClick={() => navigate("skills")}
+        </Link>
+        <Link
+          to="/skills"
+          className={location.pathname === "/skills" ? classes.active : ""}
+          onClick={navigate}
         >
           Skills
-        </button>
-        <button
-          className={activeView === "contact" ? classes.active : ""}
-          onClick={() => navigate("contact")}
+        </Link>
+        <Link
+          to="/contact"
+          className={location.pathname === "/contact" ? classes.active : ""}
+          onClick={navigate}
         >
           Contact
-        </button>
-        <button
-          onClick={() => navigate("projects")}
+        </Link>
+        <Link
+          to="/projects"
+          onClick={navigate}
           className={
-            activeView === "projects" ? classes.active : classes.primary
+            location.pathname === "/projects" ? classes.active : classes.primary
           }
         >
           See my work
-        </button>
+        </Link>
       </nav>
     </PageContentContainer>
   );

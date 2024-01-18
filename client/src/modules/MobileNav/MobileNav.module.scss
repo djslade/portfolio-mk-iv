@@ -6,7 +6,13 @@
   gap: 1rem;
   align-self: center;
 
-  button {
+  button,
+  a {
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
     font-family: "Ubuntu", sans-serif;
     border: none;
