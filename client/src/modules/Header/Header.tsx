@@ -13,8 +13,7 @@ export const Header = ({ scrolling }: Props) => {
   const navigate = useSiteNavigate();
 
   return (
-    <motion.div
-      layout="position"
+    <header
       className={`${classes.header} ${
         scrolling ? classes.scrollingHeader : ""
       }`}
@@ -59,6 +58,6 @@ export const Header = ({ scrolling }: Props) => {
           See my work
         </button>
       </nav>
-    </motion.div>
+    </header>
   );
 };

@@ -41,7 +41,7 @@ export const Main = () => {
     return () => mainRef.current?.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       <motion.div
         ref={mainRef}
         layout
