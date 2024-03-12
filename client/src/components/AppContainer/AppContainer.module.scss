@@ -3,6 +3,7 @@
 .app {
   width: 100vw;
   height: 100vh;
+  height: -webkit-fill-available;
   background-color: $scheme-navy-blue;
   display: flex;
   justify-content: center;
