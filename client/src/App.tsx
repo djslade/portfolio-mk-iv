@@ -1,5 +1,5 @@
 import "./styles/main.scss";
-import { AppContainer } from "./components";
+import { AppBackground, AppContainer } from "./components";
 import { BrowserRouter } from "react-router-dom";
 import { Main } from "./modules";
 
@@ -8,6 +8,7 @@ function App() {
     <AppContainer>
       <BrowserRouter>
         {/* AppBackground is commented out for now as the star animation lags chrome browsers */}
+        <AppBackground />
         <Main />
       </BrowserRouter>
     </AppContainer>
