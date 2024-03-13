@@ -6,6 +6,7 @@ import {
   Header,
   Landing,
   MobileNav,
+  NotFound,
   Projects,
   Skills,
 } from "..";
@@ -60,6 +61,7 @@ export const Main = () => {
             <Route path="/skills" element={<Skills />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         )}
       </motion.div>
