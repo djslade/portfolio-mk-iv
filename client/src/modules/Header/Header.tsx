@@ -47,6 +47,9 @@ export const Header = ({ scrolling }: Props) => {
         >
           Contact
         </Link>
+        <a href="https://blog.davidslade.dev/" target="_blank">
+          Blog
+        </a>
         <Link
           to="/projects"
           className={
