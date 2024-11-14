@@ -7,7 +7,6 @@ function App() {
   return (
     <AppContainer>
       <BrowserRouter>
-        {/* AppBackground is commented out for now as the star animation lags chrome browsers */}
         <AppBackground />
         <Main />
       </BrowserRouter>
