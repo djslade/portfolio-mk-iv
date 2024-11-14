@@ -47,4 +47,4 @@ jobs:
             docker stop mkiv
             docker rm mkiv
             docker image rm fenroe/mkiv:latest
-            ./scripts/carbonarapi_init.sh
+            ./scripts/mkiv_init.sh
