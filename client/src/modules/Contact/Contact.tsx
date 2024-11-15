@@ -28,6 +28,10 @@ export const Contact = () => {
 
   const sendEmail = (name: string, email: string, message: string) => {
     if (sendingEmail) return;
+    const servieID = import.meta.env.VITE_SERVICE_ID;
+    const templateID = import.meta.env.VITE_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+    console.log(publicKey);
     setSendingEmail(true);
     const templateParams = {
       name,
@@ -35,12 +39,7 @@ export const Contact = () => {
       message,
     };
     emailjs
-      .send(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
-        templateParams,
-        import.meta.env.VITE_PUBLIC_KEY
-      )
+      .send(servieID, templateID, templateParams, publicKey)
       .then(
         () => {
           setSendingEmail(false);
@@ -49,7 +48,10 @@ export const Contact = () => {
         () => {
           setSendingEmail(false);
         }
-      );
+      )
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <PageContentContainer>

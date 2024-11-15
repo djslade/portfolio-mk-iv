@@ -1,6 +1,6 @@
-@import "../../styles/variables.scss";
-@import "../../styles/mixins.scss";
-@import "../../styles/functions.scss";
+@use "../../styles/variables.scss" as *;
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/functions.scss" as *;
 
 .stars {
   position: fixed;

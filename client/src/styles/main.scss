@@ -1,7 +1,7 @@
-@import "./variables.scss";
-@import "./reset.scss";
-@import "./mixins.scss";
-@import "./functions.scss";
+@use "variables.scss" as *;
+@use "reset.scss" as *;
+@use "mixins.scss" as *;
+@use "functions.scss" as *;
 
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");

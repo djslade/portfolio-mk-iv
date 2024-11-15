@@ -1,4 +1,4 @@
-@import "../../styles//variables.scss";
+@use "../../styles//variables.scss" as *;
 
 .landingText {
   font-size: 1.5rem;

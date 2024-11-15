@@ -1,5 +1,5 @@
-@import "../../styles/mixins.scss";
-@import "../../styles/variables.scss";
+@use "../../styles/mixins.scss" as *;
+@use "../../styles/variables.scss" as *;
 
 .secondary {
   @include main-button;
