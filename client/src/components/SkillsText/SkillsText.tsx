@@ -14,7 +14,7 @@ export const SkillsText = () => {
     <PageTextSection>
       <PageText headingText="My toolkit" paragraphText={text} />
       <ButtonGroupContainer>
-        <MainButton link href="/David-Slade-CV.pdf" text="See my CV" />
+        <MainButton link href="/David-Slade-CV.pdf" text="View my CV" />
         <MainButton routerLink href="/projects" primary text="See my work" />
       </ButtonGroupContainer>
     </PageTextSection>

@@ -6,7 +6,9 @@ import { Main } from "./modules";
 function App() {
   return (
     <AppContainer>
-      <BrowserRouter>
+      <BrowserRouter
+        future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
+      >
         <AppBackground />
         <Main />
       </BrowserRouter>

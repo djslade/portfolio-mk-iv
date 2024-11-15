@@ -1,11 +1,10 @@
 @use "../../styles/variables.scss" as *;
 
 .main {
-  margin: 0 auto;
+  margin: 8px;
   max-width: 1024px;
   width: 100%;
   background-color: $scheme-white;
-  box-shadow: 0 0.5rem 1rem $scheme-black;
   color: $scheme-dark-gray;
   font-weight: medium;
   z-index: 40;
@@ -14,9 +13,11 @@
   overflow-y: unset;
   position: relative;
   border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem $scheme-black;
 
   @media (min-width: 600px) {
     border-radius: 0.5rem;
+    margin: 0 auto;
 
     &::-webkit-scrollbar {
       width: 0.5em;

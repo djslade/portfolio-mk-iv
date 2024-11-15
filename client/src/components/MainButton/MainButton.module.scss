@@ -6,6 +6,7 @@
   background-color: transparent;
   color: $scheme-navy-blue;
   text-decoration: none;
+  font-weight: 700;
 
   &:hover {
     border: 1px solid $scheme-dark-blue;
@@ -19,6 +20,7 @@
   background-color: $scheme-navy-blue;
   color: $scheme-white;
   text-decoration: none;
+  font-weight: 700;
 
   &:hover {
     border: 1px solid $scheme-dark-blue;

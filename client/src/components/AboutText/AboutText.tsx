@@ -19,7 +19,7 @@ export const AboutText = () => {
       <img src="/about-me-desktop.jpg" className={classes.aboutTextImage} />
       <PageText headingText="My story" paragraphText={text} />
       <ButtonGroupContainer>
-        <MainButton link href="/David-Slade-CV.pdf" text="See my CV" />
+        <MainButton link href="/David-Slade-CV.pdf" text="View my CV" />
         <MainButton routerLink href="/contact" primary text="Get in touch" />
       </ButtonGroupContainer>
     </PageTextSection>
