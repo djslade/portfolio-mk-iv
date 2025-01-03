@@ -2,9 +2,6 @@
 @use "../../styles/mixins.scss" as *;
 @use "../../styles/functions.scss" as *;
 
-body {
-  background-color: $scheme-navy-blue;
-}
 .stars {
   position: fixed;
   top: 0;
