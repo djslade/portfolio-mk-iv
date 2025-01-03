@@ -2,6 +2,9 @@
 @use "../../styles/mixins.scss" as *;
 @use "../../styles/functions.scss" as *;
 
+body {
+  background-color: $scheme-navy-blue;
+}
 .stars {
   position: fixed;
   top: 0;
@@ -13,7 +16,7 @@
 }
 
 .star {
-  $star-count: 5;
+  $star-count: 3;
   --star-tail-length: 6em;
   --star-tail-height: 2px;
   --star-width: calc(var(--star-tail-length) / 6);

@@ -6,7 +6,7 @@ import {
 } from "..";
 
 const text = [
-  "I'm a skilled full-stack developer with expertise in various technologies like JavaScript, Python, React, MongoDB, SQL, and more. I use these tools to create strong web applications. Alongside my technical expertise, my effective communication, product-focused mindset and problem-solving abilities make me a valuable asset for any team or project.",
+  "I pride myself on my versatility. Alongside my diverse toolkit of client and server-focused technologies, I also have experience working across several different operating systems, deploying projects in containers, and self-hosting my work via cloud and VPS. I bring a product-focused, problem-solving mindset to my work, and I know the value of listening to clients and team members when they have concerns or feedback.",
 ];
 
 export const SkillsText = () => {
@@ -14,7 +14,7 @@ export const SkillsText = () => {
     <PageTextSection>
       <PageText headingText="My toolkit" paragraphText={text} />
       <ButtonGroupContainer>
-        <MainButton link href="/David-Slade-CV.pdf" text="View my CV" />
+        <MainButton routerLink href="/contact" text="Get in touch" />
         <MainButton routerLink href="/projects" primary text="See my work" />
       </ButtonGroupContainer>
     </PageTextSection>

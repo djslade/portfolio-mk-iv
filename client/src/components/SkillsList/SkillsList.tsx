@@ -6,16 +6,17 @@ export const SkillsList = () => {
       <ul className={classes.skillsList}>
         <li>Typescript</li>
         <li>React</li>
+        <li>Docker</li>
+        <li>Go</li>
+        <li>PostgreSQL</li>
         <li>Python</li>
         <li>Tailwind</li>
         <li>Sass</li>
+        <li>Linux</li>
         <li>Nextjs</li>
         <li>MongoDB</li>
-        <li>PostgreSQL</li>
-        <li>REST APIs</li>
-        <li>AWS</li>
-        <li>Figma</li>
-        <li>Firebase</li>
+        <li>REST</li>
+        <li>Websockets</li>
       </ul>
     </div>
   );

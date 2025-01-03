@@ -20,7 +20,7 @@ export const Header = ({ scrolling }: Props) => {
       }`}
     >
       <Link to="/" className={classes.logoButton} onClick={handleNavigate}>
-        <img src="/portfolio-logo.svg" alt="David Slade" />
+        <span className={classes.logo}>david<span>slade</span></span>
       </Link>
       <button
         className={classes.mobileMenuButton}
@@ -47,9 +47,6 @@ export const Header = ({ scrolling }: Props) => {
         >
           Contact
         </Link>
-        <a href="https://blog.davidslade.dev/" target="_blank">
-          Blog
-        </a>
         <Link
           to="/projects"
           className={

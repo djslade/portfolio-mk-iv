@@ -7,10 +7,9 @@ import {
 import classes from "./AboutText.module.scss";
 
 const text: string[] = [
-  "My name’s David and I’m a self taught web developer. I currently live in south Finland with my amazing wife and our two cats.",
-  "During the pandemic I decided to teach myself how to code, and right away I knew that I had found my calling in life.",
-  "After two years of carefully refining my skills, I landed my first job as a full stack developer, where I've gained an incredible amount of experience maintaining an enterprise-level application in a high-tempo startup environment. Today I am a confident and capable developer, eager to push my limits and chase new horizons.",
-  "When I’m not at my computer you’ll usually find me in the kitchen. I’m very passionate about cooking, and I enjoy learning new recipes and preparing them for my family. I’m also an avid gamer and a huge history nerd.",
+  "My name’s David and I’m a full stack web developer. I currently live in Finland with my amazing wife and our two cats.",
+  "Originally from the UK, I moved to Finland to build a life with my partner, and it was here where I discovered my passion for programming. Although the last few years have at times proved challenging, I'm very lucky to be able to live in such a beautiful country and work in a field that I love.",
+  "Outside of my work, I’m very passionate about cooking. I enjoy learning new recipes and preparing them for my family. I'm also a huge fan of all kinds of fiction, and I'm always on the lookout for a new book to read or show to watch. If you have a recommendation I'd love to hear it!",
 ];
 
 export const AboutText = () => {
@@ -19,8 +18,8 @@ export const AboutText = () => {
       <img src="/about-me-desktop.jpg" className={classes.aboutTextImage} />
       <PageText headingText="My story" paragraphText={text} />
       <ButtonGroupContainer>
-        <MainButton link href="/David-Slade-CV.pdf" text="View my CV" />
-        <MainButton routerLink href="/contact" primary text="Get in touch" />
+        <MainButton routerLink href="/contact" text="Get in touch" />
+        <MainButton routerLink href="/projects" primary text="See my work" />
       </ButtonGroupContainer>
     </PageTextSection>
   );

@@ -21,6 +21,29 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    text-decoration: none;
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: $scheme-navy-blue;
+      font-family: "Ubuntu", sans-serif;
+      transition-property: all;
+      transition-duration: 0.2s;
+
+      span {
+        color: $scheme-gold;
+      }
+
+      &:hover {
+        color: $scheme-gold;
+
+        span {
+          color: $scheme-navy-blue;
+        }
+      }
+    }
 
     img {
       height: 2.5rem;
@@ -73,6 +96,10 @@
       color: $scheme-dark-gray;
       transition-property: all;
       transition-duration: 0.2s;
+
+      &:hover {
+        color: $scheme-dark-blue;
+      }
 
       &.primary {
         background-color: $scheme-navy-blue;

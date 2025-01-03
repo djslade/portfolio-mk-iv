@@ -12,6 +12,36 @@ export const Projects = () => {
   return (
     <PageContentContainer>
       <div className={classes.projectsOuterContainer}>
+      <FlexContainer>
+          <div className={classes.darkBlueBackground}>
+            <img src="/salinstudio-resized.jpg" />
+          </div>
+          <div className={classes.projectsTextSection}>
+            <PageTextSection>
+              <img src="/salinstudio-resized.jpg" />
+
+              <PageText
+                headingText="Salin Studio"
+                paragraphText={[
+                  "This is a portfolio site I was commissioned to build and host. The website is powered by Nextjs and Tailwind, which will allow me to expand its features later on as needed by the client. It is hosted through an Nginx configuration on a VPS via a Docker container.",
+                ]}
+              />
+              <ButtonGroupContainer>
+                <MainButton
+                  link
+                  href="https://github.com/Fenroe/salinstudio"
+                  text="Github repo"
+                />
+                <MainButton
+                  link
+                  href="https://miiasalin.com"
+                  primary
+                  text="Live demo"
+                />
+              </ButtonGroupContainer>
+            </PageTextSection>
+          </div>
+        </FlexContainer>
         <FlexContainer>
           <div className={classes.projectsTextSection}>
             <PageTextSection>

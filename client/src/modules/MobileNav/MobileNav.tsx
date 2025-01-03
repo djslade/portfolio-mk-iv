@@ -36,9 +36,6 @@ export const MobileNav = () => {
         >
           Contact
         </Link>
-        <a href="https://blog.davidslade.dev/" target="_blank">
-          Blog
-        </a>
         <Link
           to="/projects"
           onClick={navigate}

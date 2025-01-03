@@ -31,7 +31,6 @@ export const Contact = () => {
     const servieID = "default_service";
     const templateID = "template_default";
     const publicKey = "hOmldMdYbmRbaB9wB";
-    console.log(publicKey);
     setSendingEmail(true);
     const templateParams = {
       name,
