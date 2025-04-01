@@ -12,30 +12,29 @@ export const Projects = () => {
   return (
     <PageContentContainer>
       <div className={classes.projectsOuterContainer}>
-      <FlexContainer>
-          <div className={classes.darkBlueBackground}>
-            <img src="/salinstudio-resized.jpg" />
+        <FlexContainer>
+          <div className={classes.goldBackground}>
+            <img src="/molly-resized.jpg" />
           </div>
           <div className={classes.projectsTextSection}>
             <PageTextSection>
-              <img src="/salinstudio-resized.jpg" />
-
+              <img src="/molly-resized.jpg" />
               <PageText
-                headingText="Salin Studio"
+                headingText="Molly"
                 paragraphText={[
-                  "This is a portfolio site I was commissioned to build and host. The website is powered by Nextjs and Tailwind, which will allow me to expand its features later on as needed by the client. It is hosted through an Nginx configuration on a VPS via a Docker container.",
+                  "Molly is a crowdsourced recipe catalogue that removes all the clutter from recipe blog sites. Combining microservices built in Nestjs, Go and Python, Molly leverages a powerful distributed backend system for blazingly fast performance.",
                 ]}
               />
               <ButtonGroupContainer>
                 <MainButton
                   link
-                  href="https://github.com/Fenroe/salinstudio"
+                  href="https://github.com/djslade/molly"
                   text="Github repo"
                 />
                 <MainButton
-                  link
-                  href="https://miiasalin.com"
                   primary
+                  link
+                  href="https://molly.davidslade.dev/"
                   text="Live demo"
                 />
               </ButtonGroupContainer>
@@ -56,7 +55,7 @@ export const Projects = () => {
               <ButtonGroupContainer>
                 <MainButton
                   link
-                  href="https://github.com/Fenroe/totalwash"
+                  href="https://github.com/djslade/totalwash"
                   text="Github repo"
                 />
                 <MainButton
@@ -74,9 +73,36 @@ export const Projects = () => {
           </div>
         </FlexContainer>
         <FlexContainer>
-          <div className={classes.goldBackground}>
-            <img src="/chonthong-resized.jpg" />
+          <div className={classes.darkBlueBackground}>
+            <img src="/salinstudio-resized.jpg" />
           </div>
+          <div className={classes.projectsTextSection}>
+            <PageTextSection>
+              <img src="/salinstudio-resized.jpg" />
+
+              <PageText
+                headingText="Salin Studio"
+                paragraphText={[
+                  "This is a portfolio site I was commissioned to build and host. The website is powered by Nextjs and Tailwind, which will allow me to expand its features later on as needed by the client. It is hosted through an Nginx configuration on a VPS via a Docker container.",
+                ]}
+              />
+              <ButtonGroupContainer>
+                <MainButton
+                  link
+                  href="https://github.com/djslade/salinstudio"
+                  text="Github repo"
+                />
+                <MainButton
+                  link
+                  href="https://miiasalin.com"
+                  primary
+                  text="Live demo"
+                />
+              </ButtonGroupContainer>
+            </PageTextSection>
+          </div>
+        </FlexContainer>
+        <FlexContainer>
           <div className={classes.projectsTextSection}>
             <PageTextSection>
               <img src="/chonthong-resized.jpg" />
@@ -89,7 +115,7 @@ export const Projects = () => {
               <ButtonGroupContainer>
                 <MainButton
                   link
-                  href="https://github.com/Fenroe/chon-thong-restuarant"
+                  href="https://github.com/djslade/chon-thong-restuarant"
                   text="Github repo"
                 />
                 <MainButton
@@ -101,35 +127,8 @@ export const Projects = () => {
               </ButtonGroupContainer>
             </PageTextSection>
           </div>
-        </FlexContainer>
-        <FlexContainer>
-          <div className={classes.projectsTextSection}>
-            <PageTextSection>
-              <img src="/snapshot-resized.jpg" />
-              <PageText
-                headingText="Snapshot"
-                paragraphText={[
-                  "This is a social media app built on React, Tailwind and Firebase. A mix between Twitter and Instagram, users can post photos, customise their accounts, follow other users and create photo albums.",
-                ]}
-              />
-              <ButtonGroupContainer>
-                <MainButton
-                  link
-                  href="https://github.com/Fenroe/Snapshot"
-                  text="Github repo"
-                />
-                <MainButton
-                  link
-                  href="https://react-snapshot.netlify.app/"
-                  primary
-                  text="Live demo"
-                />
-              </ButtonGroupContainer>
-            </PageTextSection>
-          </div>
-
-          <div className={classes.darkBlueBackground}>
-            <img src="/snapshot-resized.jpg" />
+          <div className={classes.goldBackground}>
+            <img src="/chonthong-resized.jpg" />
           </div>
         </FlexContainer>
       </div>
