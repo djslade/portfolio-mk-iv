@@ -31,12 +31,6 @@ export const Projects = () => {
                   href="https://github.com/djslade/molly"
                   text="Github repo"
                 />
-                <MainButton
-                  primary
-                  link
-                  href="https://molly.davidslade.dev/"
-                  text="Live demo"
-                />
               </ButtonGroupContainer>
             </PageTextSection>
           </div>
@@ -57,12 +51,6 @@ export const Projects = () => {
                   link
                   href="https://github.com/djslade/totalwash"
                   text="Github repo"
-                />
-                <MainButton
-                  link
-                  href="https://totalwash.vercel.app/"
-                  primary
-                  text="Live demo"
                 />
               </ButtonGroupContainer>
             </PageTextSection>
